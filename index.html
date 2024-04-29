@@ -3,7 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- owl carousel CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="owlCarousel.css" />
     <!-- bootstrap Css cdn -->
 
     <link
@@ -14,8 +30,8 @@
     />
     <title>AB test</title>
   </head>
-  <body class="overflow-x-hidden">
-    <div class="container-fluid text-center fs-sm-5 fw_900 py-3 upperNav">
+  <body class="overflow-x-hidden px-sm-0 px-1">
+    <div class="container-fluid text-center fs-sm-5 fw_900 py-3 upperNav gsap">
       <span class="text-white"
         >30 Tage Geld-Zurück-Garantie | Kostenloser Versand im Sparplan</span
       >
@@ -25,7 +41,7 @@
       <!-- navigation line -->
 
       <!--------------------  page 1 --------------------->
-      <section class="page1">
+      <section class="page1 gsap">
         <!-- navbar -->
 
         <nav class="navbar navbar-expand-sm bg-body-tertiary">
@@ -422,7 +438,7 @@
       <!--------------------- page2 --------------------->
       <secttion class="page2 text-center">
         <!-- brands_navigation -->
-        <div class="brands_navigation bg-success py-5 px-0 my-3">
+        <div class="brands_navigation bg-success py-5 px-0 my-3 gsap">
           <h1 class="h1 text-white">As Seen on sponsored Content</h1>
 
           <div class="row py-sm-4 py-2">
@@ -454,103 +470,83 @@
         </div>
 
         <!-- scroller` -->
-        <div class="scroller_box bg-warning mt-5 position-relative rounded-3">
-          <!-- btn previous  -->
-          <button
-            class="btn btn-light rounded-cap position-absolute top-50"
-            id="previousBtn"
-          >
-            <img src="assets/imgs/icon-previous.svg" alt="previous" />
-          </button>
-          <h1 class="sliderHeading fw_900 text-white">AKTIVE BESTANDTEILE</h1>
+        <div
+          class="scroller_box bg-warning mt-5 py-2 position-relative rounded-3 gsap"
+        >
+          <h1 class="sliderHeading fw_900 text-white my-2">
+            AKTIVE BESTANDTEILE
+          </h1>
+          <div class="row owl-carousel my-5" id="owl_carousel_1">
+            <!-- scroller col 1 -->
+            <div class="item col d-grid row-gap-3">
+              <img src="assets/imgs/Foods/GRÜNLIPPMUSCHEL.jpg" alt="smashed" />
+              <h1 class="h1 text-white">GRÜNLIPPMUSCHEL</h1>
+              <span class="textBlack fw-semibold"
+                >Reichhaltige Quelle an Glucosamin und Chondroitin.
+                Grünlippmuschel enthält ETA , eine besonders wertvolle Form von
+                Omega 3 Fettsäuren</span
+              >
+            </div>
 
-          <div class="d-flex scroller_wrapper">
-            <div class="row gap-1 px-3 flex-row" style="flex: none">
-              <!-- scroller col 1 -->
-              <div class="col d-grid row-gap-3">
-                <img
-                  src="assets/imgs/Foods/GRÜNLIPPMUSCHEL.jpg"
-                  alt="smashed"
-                />
-                <h1 class="h1 text-white">GRÜNLIPPMUSCHEL</h1>
-                <span class="textBlack fw-semibold"
-                  >Reichhaltige Quelle an Glucosamin und Chondroitin.
-                  Grünlippmuschel enthält ETA , eine besonders wertvolle Form
-                  von Omega 3 Fettsäuren</span
-                >
-              </div>
+            <!-- scroller col 2 -->
+            <div class="item col d-grid row-gap-3">
+              <img src="assets/imgs/Foods/Crab.jpg" alt="smashed" />
+              <h1 class="h1 text-white">GLUCOSAMIN</h1>
+              <span class="textBlack fw-semibold">
+                Kommt natürlich im Knorpelgewebe vor, das ein Polster zwischen
+                den Gelenken bildet</span
+              >
+            </div>
 
-              <!-- scroller col 2 -->
-              <div class="col d-grid row-gap-3">
-                <img src="assets/imgs/Foods/Crab.jpg" alt="smashed" />
-                <h1 class="h1 text-white">GLUCOSAMIN</h1>
-                <span class="textBlack fw-semibold">
-                  Kommt natürlich im Knorpelgewebe vor, das ein Polster zwischen
-                  den Gelenken bildet</span
-                >
-              </div>
-
-              <!-- scroller col 3 -->
-              <div class="col d-grid row-gap-3">
-                <img src="assets/imgs/Foods/KURKUMA.webp" alt="smashed" />
-                <h1 class="h1 text-white">KURKUMA</h1>
-                <span class="textBlack fw-semibold">
-                  Kurkuma ist reich an Kurkumin, welches antioxidative
-                  Eigenschaften besitzt</span
-                >
-              </div>
+            <!-- scroller col 3 -->
+            <div class="item col d-grid row-gap-3">
+              <img src="assets/imgs/Foods/KURKUMA.webp" alt="smashed" />
+              <h1 class="h1 text-white">KURKUMA</h1>
+              <span class="textBlack fw-semibold">
+                Kurkuma ist reich an Kurkumin, welches antioxidative
+                Eigenschaften besitzt</span
+              >
             </div>
 
             <!-- scroller 2nd section -->
 
-            <div class="row gap-1 px-3 flex-row" style="flex: none">
-              <!-- scroller col 1 -->
-              <div class="col d-grid row-gap-3">
-                <img
-                  src="assets/imgs/Foods/GRÜNLIPPMUSCHEL.jpg"
-                  alt="smashed"
-                />
-                <h1 class="h1 text-white">GRÜNLIPPMUSCHEL</h1>
-                <span class="textBlack fw-semibold"
-                  >Reichhaltige Quelle an Glucosamin und Chondroitin.
-                  Grünlippmuschel enthält ETA , eine besonders wertvolle Form
-                  von Omega 3 Fettsäuren</span
-                >
-              </div>
+            <!-- scroller col 1 -->
+            <div class="item col d-grid row-gap-3">
+              <img src="assets/imgs/Foods/GRÜNLIPPMUSCHEL.jpg" alt="smashed" />
+              <h1 class="h1 text-white">GRÜNLIPPMUSCHEL</h1>
+              <span class="textBlack fw-semibold"
+                >Reichhaltige Quelle an Glucosamin und Chondroitin.
+                Grünlippmuschel enthält ETA , eine besonders wertvolle Form von
+                Omega 3 Fettsäuren</span
+              >
+            </div>
 
-              <!-- scroller col 2 -->
-              <div class="col d-grid row-gap-3">
-                <img src="assets/imgs/Foods/Crab.jpg" alt="smashed" />
-                <h1 class="h1 text-white">GLUCOSAMIN</h1>
-                <span class="textBlack fw-semibold">
-                  Kommt natürlich im Knorpelgewebe vor, das ein Polster zwischen
-                  den Gelenken bildet</span
-                >
-              </div>
+            <!-- scroller col 2 -->
+            <div class="col item d-grid row-gap-3">
+              <img src="assets/imgs/Foods/Crab.jpg" alt="smashed" />
+              <h1 class="h1 text-white">GLUCOSAMIN</h1>
+              <span class="textBlack fw-semibold">
+                Kommt natürlich im Knorpelgewebe vor, das ein Polster zwischen
+                den Gelenken bildet</span
+              >
+            </div>
 
-              <!-- scroller col 3 -->
-              <div class="col d-grid row-gap-3">
-                <img src="assets/imgs/Foods/KURKUMA.webp" alt="smashed" />
-                <h1 class="h1 text-white">KURKUMA</h1>
-                <span class="textBlack fw-semibold">
-                  Kurkuma ist reich an Kurkumin, welches antioxidative
-                  Eigenschaften besitzt</span
-                >
-              </div>
+            <!-- scroller col 3 -->
+            <div class="col item d-grid row-gap-3">
+              <img src="assets/imgs/Foods/KURKUMA.webp" alt="smashed" />
+              <h1 class="h1 text-white">KURKUMA</h1>
+              <span class="textBlack fw-semibold">
+                Kurkuma ist reich an Kurkumin, welches antioxidative
+                Eigenschaften besitzt</span
+              >
             </div>
           </div>
           <!-- btn next  -->
-          <button
-            class="btn btn-light rounded-cap position-absolute top-50"
-            id="nextBtn"
-          >
-            <img src="assets/imgs/icon-next.svg" alt="previous" />
-          </button>
         </div>
 
         <!------------------- Dogs section ------------------->
         <div
-          class="dogs_section bg-success my-5 text-white text-sm-start position-relative d-sm-block d-grid"
+          class="dogs_section bg-success my-5 text-white text-sm-start position-relative d-sm-block d-grid gsap"
           style="padding: 4rem"
         >
           <h1 class="h1 fw_900 text-sm-start">
@@ -594,7 +590,7 @@
       </secttion>
       <!--------------------- page3 --------------------->
 
-      <section class="page3 bg-warning text-center py-5">
+      <section class="page3 bg-warning text-center py-5 gsap">
         <h1 class="fw_900 text-white mb-5 sliderHeading">
           REVOLUTIONÄRE SNACKS
         </h1>
@@ -682,7 +678,7 @@
         </div>
       </section>
       <!---------------------- page4 ---------------------->
-      <section class="page4 text-center my-4">
+      <section class="page4 text-center my-4 gsap">
         <h1 class="my-2 fw_900">WAS KUNDEN ÜBER HIP & JOINT SAGEN</h1>
 
         <div
@@ -1068,7 +1064,7 @@
           <div class="col-md col-sm-6 col-12">
             <!-------- card -------->
             <!-- 1st card of 4th review -->
-            <div class="card rounded-3">
+            <div class="card my-sm-2 my-1 rounded-4">
               <!-------- card body -------->
               <div class="card-body">
                 <h5 class="card-title fw_900 fs-4">
@@ -1090,7 +1086,7 @@
             </div>
 
             <!-- 2nd card of 4th review -->
-            <div class="card rounded-3">
+            <div class="card my-sm-2 my-1 rounded-4">
               <!-------- card body -------->
               <div class="card-body">
                 <h5 class="card-title fw_900 fs-4">
@@ -1108,7 +1104,7 @@
             </div>
 
             <!-- 3rd card of 4th review -->
-            <div class="card rounded-3">
+            <div class="card my-sm-2 my-1 rounded-4">
               <img
                 src="assets/imgs/review_imgs/review_img_13.jpg"
                 alt="review_img_13"
@@ -1131,7 +1127,7 @@
             </div>
 
             <!-- 4th card of 4th review -->
-            <div class="card rounded-3">
+            <div class="card my-sm-2 my-1 rounded-4">
               <img
                 src="assets/imgs/review_imgs/review_img_14.jpg"
                 alt="review_img_13"
@@ -1154,7 +1150,7 @@
             </div>
 
             <!-- 5th card of 4th review -->
-            <div class="card rounded-3">
+            <div class="card my-sm-2 my-1 rounded-4">
               <img
                 src="assets/imgs/review_imgs/review_img_15.jpg"
                 alt="review_img_13"
@@ -1185,10 +1181,292 @@
         </button>
       </section>
 
+      <!-- page4_5 -->
+      <div class="page4_5 owl-carousel owl-theme my-5 gsao">
+        <!-- 1st item -->
+        <div class="item card d-grid text-center border-0">
+          <div class="card-body">
+            <button
+              class="btn py-2 text-white d-block mx-auto fs-5 px-3 rounded-4"
+              style="background-color: var(--bg_skyBlue_light)"
+            >
+              MULTIVITA 8 in 1
+            </button>
+            <img src="assets/imgs/Dog_Cans/can_1.jpg" class="" alt="can_1" />
+
+            <h1 class="card-title fw_900 fs-2 my-3">MULTIVITA</h1>
+            <h3 class="card-subtitle fw_900 my-2">€29,90</h3>
+            <p class="card-text my-3">€110.74/kg</p>
+            <div
+              class="row align-items-center justify-content-center gap-3 mb-3"
+            >
+              <div class="col-auto ratingStars_box px-0 d-flex">
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+              </div>
+              <div class="col-auto px-0 fw-bold fs-5">(72)</div>
+            </div>
+            <button
+              class="btn py-2 text-white rounded-4 fs-5"
+              style="background-color: var(--bg_Yellow_Dark)"
+            >
+              INS KÖRBCHEN
+            </button>
+          </div>
+        </div>
+
+        <!-- 2nd item -->
+        <div class="item card d-grid text-center border-0">
+          <div class="card-body">
+            <button
+              class="btn py-2 text-white d-block mx-auto fs-5 px-3 rounded-4"
+              style="background-color: var(--bg_purpleRed_Dark)"
+            >
+              ALLERGIE UND IMMUNSYSTEM
+            </button>
+            <img src="assets/imgs/Dog_Cans/can_2.jpg" class="" alt="can_1" />
+
+            <h1 class="card-title fw_900 fs-2 my-3">ALLERGY</h1>
+            <h3 class="card-subtitle fw_900 my-2">€29,90</h3>
+            <p class="card-text my-3">€110.74/kg</p>
+            <div
+              class="row align-items-center justify-content-center gap-3 mb-3"
+            >
+              <div class="col-auto ratingStars_box px-0 d-flex">
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+              </div>
+              <div class="col-auto px-0 fw-bold fs-5">(17)</div>
+            </div>
+            <button
+              class="btn py-2 text-white rounded-pill fs-5"
+              style="background-color: var(--bg_Yellow_Dark)"
+            >
+              INS KÖRBCHEN
+            </button>
+          </div>
+        </div>
+
+        <!-- 3rd item -->
+        <div class="item card d-grid text-center border-0">
+          <div class="card-body">
+            <button
+              class="btn py-2 text-white d-block mx-auto fs-5 px-3 rounded-4"
+              style="background-color: var(--bg_purple_light)"
+            >
+              BERUHIGUNG
+            </button>
+            <img src="assets/imgs/Dog_Cans/can_3.jpg" class="" alt="can_1" />
+
+            <h1 class="card-title fw_900 fs-2 my-3">RELAX</h1>
+            <h3 class="card-subtitle fw_900 my-2">€29,90</h3>
+            <p class="card-text my-3">€110.74/kg</p>
+            <div
+              class="row align-items-center justify-content-center gap-3 mb-3"
+            >
+              <div class="col-auto ratingStars_box px-0 d-flex">
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+              </div>
+              <div class="col-auto px-0 fw-bold fs-5">(129)</div>
+            </div>
+            <button
+              class="btn py-2 text-white rounded-pill fs-5"
+              style="background-color: var(--bg_Yellow_Dark)"
+            >
+              INS KÖRBCHEN
+            </button>
+          </div>
+        </div>
+
+        <!-- 4th item -->
+        <div class="item card d-grid text-center border-0">
+          <div class="card-body">
+            <button
+              class="btn py-2 text-white d-block mx-auto fs-5 px-3 rounded-4"
+              style="background-color: var(--parrot)"
+            >
+              MAGEN UND DARM
+            </button>
+            <img src="assets/imgs/Dog_Cans/can_4.jpg" class="" alt="can_1" />
+
+            <h1 class="card-title fw_900 fs-2 my-3">PROBIOTIC</h1>
+            <h3 class="card-subtitle fw_900 my-2">€29,90</h3>
+            <p class="card-text my-3">€110.74/kg</p>
+            <div
+              class="row align-items-center justify-content-center gap-3 mb-3"
+            >
+              <div class="col-auto ratingStars_box px-0 d-flex">
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+              </div>
+              <div class="col-auto px-0 fw-bold fs-5">(187)</div>
+            </div>
+            <button
+              class="btn py-2 text-white rounded-pill fs-5"
+              style="background-color: var(--bg_Yellow_Dark)"
+            >
+              INS KÖRBCHEN
+            </button>
+          </div>
+        </div>
+
+        <!-- 1st item -->
+        <div class="item card d-grid text-center border-0">
+          <div class="card-body">
+            <button
+              class="btn py-2 text-white d-block mx-auto fs-5 px-3 rounded-4"
+              style="background-color: var(--bg_skyBlue_light)"
+            >
+              MULTIVITA 8 in 1
+            </button>
+            <img src="assets/imgs/Dog_Cans/can_1.jpg" class="" alt="can_1" />
+
+            <h1 class="card-title fw_900 fs-2 my-3">MULTIVITA</h1>
+            <h3 class="card-subtitle fw_900 my-2">€29,90</h3>
+            <p class="card-text my-3">€110.74/kg</p>
+            <div
+              class="row align-items-center justify-content-center gap-3 mb-3"
+            >
+              <div class="col-auto ratingStars_box px-0 d-flex">
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+              </div>
+              <div class="col-auto px-0 fw-bold fs-5">(72)</div>
+            </div>
+            <button
+              class="btn py-2 text-white rounded-4 fs-5"
+              style="background-color: var(--bg_Yellow_Dark)"
+            >
+              INS KÖRBCHEN
+            </button>
+          </div>
+        </div>
+
+        <!-- 2nd item -->
+        <div class="item card d-grid text-center border-0">
+          <div class="card-body">
+            <button
+              class="btn py-2 text-white d-block mx-auto fs-5 px-3 rounded-4"
+              style="background-color: var(--bg_purpleRed_Dark)"
+            >
+              ALLERGIE UND IMMUNSYSTEM
+            </button>
+            <img src="assets/imgs/Dog_Cans/can_2.jpg" class="" alt="can_1" />
+
+            <h1 class="card-title fw_900 fs-2 my-3">ALLERGY</h1>
+            <h3 class="card-subtitle fw_900 my-2">€29,90</h3>
+            <p class="card-text my-3">€110.74/kg</p>
+            <div
+              class="row align-items-center justify-content-center gap-3 mb-3"
+            >
+              <div class="col-auto ratingStars_box px-0 d-flex">
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+              </div>
+              <div class="col-auto px-0 fw-bold fs-5">(17)</div>
+            </div>
+            <button
+              class="btn py-2 text-white rounded-pill fs-5"
+              style="background-color: var(--bg_Yellow_Dark)"
+            >
+              INS KÖRBCHEN
+            </button>
+          </div>
+        </div>
+
+        <!-- 3rd item -->
+        <div class="item card d-grid text-center border-0">
+          <div class="card-body">
+            <button
+              class="btn py-2 text-white d-block mx-auto fs-5 px-3 rounded-4"
+              style="background-color: var(--bg_purple_light)"
+            >
+              BERUHIGUNG
+            </button>
+            <img src="assets/imgs/Dog_Cans/can_3.jpg" class="" alt="can_1" />
+
+            <h1 class="card-title fw_900 fs-2 my-3">RELAX</h1>
+            <h3 class="card-subtitle fw_900 my-2">€29,90</h3>
+            <p class="card-text my-3">€110.74/kg</p>
+            <div
+              class="row align-items-center justify-content-center gap-3 mb-3"
+            >
+              <div class="col-auto ratingStars_box px-0 d-flex">
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+              </div>
+              <div class="col-auto px-0 fw-bold fs-5">(129)</div>
+            </div>
+            <button
+              class="btn py-2 text-white rounded-pill fs-5"
+              style="background-color: var(--bg_Yellow_Dark)"
+            >
+              INS KÖRBCHEN
+            </button>
+          </div>
+        </div>
+
+        <!-- 4th item -->
+        <div class="item card d-grid text-center border-0">
+          <div class="card-body">
+            <button
+              class="btn py-2 text-white d-block mx-auto fs-5 px-3 rounded-4"
+              style="background-color: var(--parrot)"
+            >
+              MAGEN UND DARM
+            </button>
+            <img src="assets/imgs/Dog_Cans/can_4.jpg" class="" alt="can_1" />
+
+            <h1 class="card-title fw_900 fs-2 my-3">PROBIOTIC</h1>
+            <h3 class="card-subtitle fw_900 my-2">€29,90</h3>
+            <p class="card-text my-3">€110.74/kg</p>
+            <div
+              class="row align-items-center justify-content-center gap-3 mb-3"
+            >
+              <div class="col-auto ratingStars_box px-0 d-flex">
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+                <img src="assets/imgs/star.png" alt="star" />
+              </div>
+              <div class="col-auto px-0 fw-bold fs-5">(187)</div>
+            </div>
+            <button
+              class="btn py-2 text-white rounded-pill fs-5"
+              style="background-color: var(--bg_Yellow_Dark)"
+            >
+              INS KÖRBCHEN
+            </button>
+          </div>
+        </div>
+      </div>
       <!-- page5 -->
 
       <section
-        class="page5 mt-4 flex_x_center justify-content-center flex-column"
+        class="page5 mt-4 flex_x_center justify-content-center flex-column gsap"
       >
         <div class="QuetionAnswer d-grid gap-2 text-start py-4 my-2">
           <h1 class="questionHeading fw_900 text-white py-sm-4 text-center">
@@ -1374,7 +1652,7 @@
 
       <!------------- page6 ------------->
 
-      <section class="page6 mx-auto my-5">
+      <section class="page6 mx-auto my-5 gsap">
         <div class="row text-start mx-auto">
           <!-- 1st col  -->
           <div class="col-md col-12">
@@ -1409,7 +1687,7 @@
       </section>
 
       <!------------- page7 ------------->
-      <section class="page7 py-5">
+      <section class="page7 py-5 gsap">
         <div class="row mx-auto">
           <!-- 1st col of page7 -->
           <div class="col-sm col-6">
@@ -1476,7 +1754,7 @@
           </div>
         </div>
 
-        <div class="row mx-auto my-5 row-gap-4">
+        <div class="row mx-auto my-5 row-gap-4 gsap">
           <div
             class="col-md col-sm-6 col-12 d-flex align-items-center justify-content-xl-center justify-content-around gap-sm-5 gap-2"
           >
@@ -1510,7 +1788,7 @@
         </div>
       </section>
       <!-- footer -->
-      <footer class="mx-auto">
+      <footer class="mx-auto gsap">
         <div
           class="container d-flex align-items-center justify-content-between py-5 flex-sm-row flex-column"
         >
@@ -1521,34 +1799,32 @@
         </div>
       </footer>
     </main>
-
+    <!-- owl-carousel CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <!-- bootstrap js cdn -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <!-- GSAP CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </body>
-  <!-- locomotive -->
-
-  <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script> -->
-
-  <!-- gsap.min -->
-
-  <!-- <script
-src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
-integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
-crossorigin="anonymous"
-referrerpolicy="no-referrer"
-></script> -->
-
-  <!-- ScrollTrigger -->
-
-  <!-- <script
-src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"
-integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
-crossorigin="anonymous"
-referrerpolicy="no-referrer"
-></script> -->
   <script src="script.js"></script>
 </html>
