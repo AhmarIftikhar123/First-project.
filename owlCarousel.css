@@ -1,0 +1,35 @@
+.owl-prev,
+.owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #333 !important;
+  transition: opacity 0.2s ease-in-out;
+  &:hover {
+    background-color: transparent !important;
+    opacity: 0.85;
+  }
+  & span {
+    font-size: 4rem !important;
+  }
+}
+
+.owl-prev {
+  left: 20px;
+}
+
+.owl-next {
+  right: 20px;
+}
+
+.owl-dot {
+  width: 0.5rem !important;
+  height: 0.5rem !important;
+  margin: 0 5px;
+}
+
+.owl-dot.active {
+  & span {
+    background-color: var(--bg_Yellow_Dark) !important;
+  }
+}
