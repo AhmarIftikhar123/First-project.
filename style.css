@@ -109,23 +109,6 @@ html {
 body {
   min-height: 100dvh;
 }
-/* pages heights */
-.page1,
-.page2 {
-  min-height: 100dvh;
-}
-
-.page3 {
-  min-height: 50dvh;
-}
-
-.page1,
-.page2,
-.page3,
-.page4,
-.page5 {
-  /* display: none !important; */
-}
 
 /* ---------------------- upperNav ----------------------  */
 .upperNav {
@@ -293,12 +276,7 @@ input {
   padding-inline: 20%;
 }
 
-#nextBtn {
-  right: 1.25%;
-}
-#previousBtn {
-  left: 1.25%;
-}
+
 /*------------- dogs_section -------------*/
 .dogs_section {
   place-items: center;
@@ -320,6 +298,29 @@ input {
 .page4 {
   & select {
     border: 1px solid var(--bg_gray_Light);
+  }
+}
+
+/* page4_5 using nesting */
+
+.page4_5 .card {
+  place-items: center;
+  & .card-body {
+    max-width: 23rem;
+  }
+  button {
+    width: 100%;
+  }
+  & button:nth-child(1) {
+    font-weight: var(--fw-600);
+  }
+
+  & img {
+    max-width: 20rem;
+  }
+
+  & .ratingStars_box > img {
+    max-width: 1.125rem;
   }
 }
 
@@ -347,7 +348,7 @@ input {
 
 /* control the imgs size  */
 .card-img-top {
-  min-height: 12rem !important;
+  /* min-height: 12rem !important; */
   max-height: 20rem !important;
   object-fit: cover;
 }
@@ -401,7 +402,7 @@ input {
   }
 }
 /* page 7 */
-.page7:not(.row:last-child){
+.page7:not(.row:last-child) {
   background-color: var(--bg_gray_Light);
 }
 .page7 ul li a {
@@ -495,7 +496,8 @@ input {
   }
 
   .page6 .row,
-  .page7 .row ,footer{
+  .page7 .row,
+  footer {
     width: 95rem;
   }
 }
@@ -544,9 +546,6 @@ input {
 }
 
 @media (width < 578px) {
-  html {
-    font-size: 50%;
-  }
   body {
     text-align: center !important;
   }
